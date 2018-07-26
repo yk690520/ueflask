@@ -7,7 +7,7 @@ from flask import Flask
 import re,os
 from flask import jsonify
 
-__ue_config=None
+
 
 def setApp(app:Flask,ueconfig:str="/static/ue/config/config.json"):
     if isinstance(app,Flask):

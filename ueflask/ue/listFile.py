@@ -1,6 +1,8 @@
 from flask import request
 import os,re
 
+_if_use_qiniu=False
+
 class ListFile():
     def __init__(self,config):
         '''
@@ -84,4 +86,12 @@ class ListFile():
         url = url.replace("\\", "/")
         return url
 
+def openQiniu(bool):
+    '''
+    是否启用七牛云
+    :param bool:
+    :return:
+    '''
+    global _if_use_qiniu
+    _if_use_qiniu=bool
 
