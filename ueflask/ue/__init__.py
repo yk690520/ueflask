@@ -51,7 +51,7 @@ def __controller():
                 "maxSize":__ue_config['videoMaxSize'],
                 "allowFiles":__ue_config['videoAllowFiles']
             }
-            fieldName=__ue_config['videoAllowFiles']
+            fieldName=__ue_config['videoFieldName']
         else:
             config={
                 "pathFormat": __ue_config['filePathFormat'],

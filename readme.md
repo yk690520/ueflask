@@ -28,15 +28,17 @@ setup.py    (setup 安装文件)
 
 ---------------------------------项目使用说明（简单的Demo）-------------------------
 
-1、使用git clone
+1、git clone git@github.com:yk690520/ueflask.git           #克隆ueflask代码
 
-2、使用 python setup.py install 安装ueflask包
+2、cd ueflask                 #进入ueflask目录
 
-3、将 static 下的文件拷贝至【你的项目】目录下的static目录里
+3、python setup.py install            #安装ueflask模块
 
-4、将 templates 下的文件拷贝至【你的项目】目录下的templates目录里
+4、将 static 下的文件拷贝至【你的项目】目录下的 static 目录里
 
-5、在【你的项目】app.py里：
+5、将 templates 下的文件拷贝至【你的项目】目录下的 templates 目录里
+
+6、在【你的项目】app.py里：
 
     from flask import Flask
 
@@ -50,18 +52,20 @@ setup.py    (setup 安装文件)
 
     def hello():
 
-    return render_template("index.html")
+        return render_template("index.html")
 
 
-6、即可使用
+7、即可使用
 
 ---------------------------项目自带Demo展示----------------------------------------------------
 
-1、cd ueflask目录
+1、git clone git@github.com:yk690520/ueflask.git           #克隆ueflask代码
 
-2、flask run
+2、cd ueflask                     #进入ueflask目录
 
-3、在浏览器访问127.0.0.1:5000即可
+3、flask run                       #运行flask
+
+4、在浏览器访问127.0.0.1:5000即可
 
 （提示：需先配置flask环境pip3 install flask)
 
