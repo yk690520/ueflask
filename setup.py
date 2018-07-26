@@ -2,7 +2,7 @@ from setuptools import find_packages,setup
 setup(
     name = 'ueflask',     #pypi中的名称，pip或者easy_install安装时使用的名称
 
-    version = '0.3',
+    version = '0.1',
     author ='mlea',
     author_email='yk690520@outlook.com',
     description='This is a plugins for uediter',
