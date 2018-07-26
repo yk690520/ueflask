@@ -17,5 +17,4 @@ setup(
 
     # 此项需要，否则卸载时报windows error
     zip_safe=False
-
 )

@@ -6,6 +6,11 @@ from werkzeug.utils import secure_filename
 import random,re,os
 class Uploader():
     def __init__(self,fileField,config):
+        '''
+        Uploader是上传文件，图片，视频的主要类
+        :param fileField: 文件域名
+        :param config: 相关配置文件
+        '''
         self._stateMap={
             "SUCESS":"SUCESS",
             "OUT_UPLOAD_MAX_SIZE":"文件大小超出 upload_max_filesize 限制",
@@ -35,21 +40,21 @@ class Uploader():
         self.__upFile()
 
     def __upFile(self):
+        '''
+        执行上传的主要方法
+        :return:None
+        '''
         if self._fileField not in request.files:
             self._stateInfo=self.__getStateInfo("ERROR_FILE_NOT_FOUND")
             return
+        #取到上传的文件对象
         file=request.files[self._fileField]
-        fileName=file.filename
-        if fileName=="":
+        self._oriName = file.filename
+        if self._oriName=="":
             self._stateInfo=self.__getStateInfo("ERROR_FILE_NOT_FOUND")
             return
-       # if 'error' in file:   注释说明：由于in会遍历文件，导致上传的文件只有0字节
-          #  self._stateInfo=self.__getStateInfo(file['error'])
-           # return
-
-        self._oriName=self.__getOriName(fileName)
-        self._fileSize=file.stream._max_size
-        self._fileType=self.__getFileType(fileName)
+        self._fileSize = file.stream._max_size
+        self._fileType=self.__getFileType()#文件后缀
         self._fullName=self.__getFullName()#完整的文件名（从站点目录下开始）
         self._filePath=self.__getFilePath()#完整的文件路径（全路径）
         self._fileName=self.__getFileName()#文件名
@@ -75,6 +80,7 @@ class Uploader():
         #保存文件
         try:
             file.save(self._filePath)
+
             pass
         except:
             self._stateInfo = self.__getStateInfo("UNKNOWN_ERROR")
@@ -83,7 +89,7 @@ class Uploader():
 
     #检测文件类型
     def __checkType(self):
-        return ".%s" % (self._fileType.lower(),) in self._config['allowFiles']
+        return self._fileType in self._config['allowFiles']
 
     #检查文件大小
     def __checkSize(self):
@@ -117,28 +123,19 @@ class Uploader():
         format = format.replace("{ss}", date[6])
         format = format.replace("{time}", str(time))
         #替换文件名的非法字符，并替换文件名
-        oriName=secure_filename(self._oriName)
+        oriName=secure_filename(self._oriName if self._oriName.rfind(".") == -1 else self._oriName[:self._oriName.rfind(".")])
         format=format.replace("{filename}",oriName)
         #替换随机字符串
         randNum = str(int(random.random() * 10000000000))[:int(re.findall("\{rand\:([\d]*)\}", format)[0])]
         format = re.sub("\{rand\:[\d]*\}", randNum, format)
 
         ext=self._fileType
-        return format if ext=="" else "%s.%s" % (format,ext)
+        return format if ext=="" else "%s%s" % (format,ext)
 
-    #获取原始文件名（不带后缀）
-    def __getOriName(self,fileName):
-        if "." in fileName:
-            return fileName.split(".")[0]
-        else:
-            return fileName
 
     #获取文件类型
-    def __getFileType(self,fileName):
-        if "." in fileName:
-            return fileName.split(".")[len(fileName.split("."))-1]
-        else:
-            return ""
+    def __getFileType(self):
+        return "" if self._oriName.rfind(".")==-1 else self._oriName[self._oriName.rfind("."):].lower()
 
     #获取编码相对应的错误
     def __getStateInfo(self,error):
@@ -153,7 +150,7 @@ class Uploader():
             "state":self._stateInfo,
             "url":self._fullName,
             "title":self._fileName,
-            "original":"%s.%s" % (self._oriName,self._fileType),
+            "original":self._oriName,
             "type":self._fileType,
             "size":self._fileSize
         }
