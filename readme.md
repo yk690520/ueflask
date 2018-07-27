@@ -67,9 +67,9 @@ setup.py    (setup 安装文件)
 
 1、git clone git@github.com:yk690520/ueflask.git           #克隆ueflask代码
 
-2、python setup.py install
+2、cd ueflask                     #进入ueflask目录
 
-3、cd ueflask                     #进入ueflask目录
+3、python setup.py install
 
 4、flask run                       #运行flask
 
