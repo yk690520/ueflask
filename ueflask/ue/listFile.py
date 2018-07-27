@@ -1,7 +1,7 @@
 from flask import request
+from ueflask.qiniu import listFile
 import os,re
 import ueflask.config as config
-
 
 class ListFile():
     def __init__(self,config):
@@ -25,11 +25,10 @@ class ListFile():
         self._allowFiles = self._config["allowFiles"]
         # 获取文件列表
         if config._if_use_qiniu:
-            self.__getFilesFromJso()
+            self.__getFilesFromQiniusel()
         else:
             self._path = self.__addposfixx("%s%s" % (os.getcwd(), self.__addsufixx(self._config["path"])))
             self.__getfiles()
-
         if len(self._files) == 0:
             self._stateinfor="no match file"
         else:
@@ -38,15 +37,14 @@ class ListFile():
             self._lists = self._files[:lenSize]
             self._stateinfor="SUCCESS"
 
-    def __getFilesFromJso(self):
+    def __getFilesFromQiniusel(self):
         '''
         从七牛云获取文件
         :return:null或者取到的文件
         '''
-        if config._upload_files and config._upload_files.get(self._config["type"]):
-            for filename,fileurl in config._upload_files.get(self._config["type"]).items():
-                if os.path.splitext(filename)[1] in self._allowFiles:
-                    self._files.append({'url':fileurl})
+        files=listFile(self._config["path"],)
+        self._files= [] if files==None else files
+
 
     def getReturnInfor(self):
         '''

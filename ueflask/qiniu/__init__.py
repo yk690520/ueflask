@@ -1,1 +1,2 @@
-from ueflask.qiniu.upload import uploadFile
+from ueflask.qiniu.qiniuer import uploadFile
+from ueflask.qiniu.qiniuer import listFile

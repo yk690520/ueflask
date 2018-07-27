@@ -8,31 +8,7 @@ _secret_key=None
 _bucket={}
 #是否启用七牛云
 _if_use_qiniu=False
-#存储上传文件的
-_upload_files={}
-#七牛云配置文件保存路径
-_qiniu_file_path="/qiniu_config.json"
 
-def __read_upload_files():
-    '''
-    读取七牛云配置文件
-    :return:
-    '''
-    global _upload_files
-    path="%s%s" % (os.getcwd(),__checkSupixx(_qiniu_file_path))
-    if os.path.exists(path) and os.access(path,os.R_OK):
-        _upload_files=json.load(open(path))
-
-def __save_upload_files():
-    '''
-    保存七牛云配置文件
-    :return:
-    '''
-    global _upload_files
-    path = "%s%s" % (os.getcwd(), __checkSupixx(_qiniu_file_path))
-    if os.path.exists(path) and os.access(path, os.W_OK):
-        os.remove(path)
-    json.dump(_upload_files,open(path,"w"))
 
 def __checkSupixx(path):
     '''
@@ -68,22 +44,4 @@ def setBucket(bucket_name:str,bucket_host:str):
     if not bucket_host[-2:-1]=="/":
         bucket_host="%s/" % bucket_host
     _bucket[bucket_name]=bucket_host
-
-def addAFile(type,filename,filenameurl):
-    '''
-    添加一个文件到存储文件配置里,并存储到网站目录下
-    :param type: 文件类型
-    :param filename: 文件名
-    :param filenameurl: 文件url
-    :return:
-    '''
-    global _upload_files
-    upload_files_type={}
-    if _upload_files.get(type):
-        upload_files_type=_upload_files.get(type)
-    upload_files_type[filename]=filenameurl
-    _upload_files[type]=upload_files_type
-    __save_upload_files()
-
-__read_upload_files()
 
