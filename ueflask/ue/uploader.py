@@ -4,9 +4,9 @@ from datetime import datetime
 from flask import request
 from werkzeug.utils import secure_filename
 import random,re,os
-from ueflask.qiniu import uploadFile
+from ueflask.qiniu import *
+import ueflask.config as config
 
-_if_use_qiniu=False
 class Uploader():
     def __init__(self,fileField,config):
         '''
@@ -83,17 +83,21 @@ class Uploader():
         #保存文件
         try:
             file.save(self._filePath)
-            # 上传至七牛云
-            self._fullName=uploadFile(self._fileName, self._filePath)
-            if self._fullName==None:
-                self._stateInfo = self.__getStateInfo("UNKNOWN_ERROR")
         except:
             self._stateInfo = self.__getStateInfo("UNKNOWN_ERROR")
         else:
             self._stateInfo=self._stateMap["SUCESS"]
-        finally:
-            if os.path.exists(self._filePath):
-                os.remove(self._filePath)
+
+        # 上传至七牛云
+        if config._if_use_qiniu:
+            try:
+                self._fullName = uploadFile(self._fileName, self._filePath)
+                if self._fullName == None:
+                    self._stateInfo = self.__getStateInfo("UNKNOWN_ERROR")
+                config.addAFile(self._config['type'],self._fileName,self._fullName)
+            finally:
+                if os.path.exists(self._filePath) and os.access(self._filePath,os.W_OK) and config._if_use_qiniu:
+                    os.remove(self._filePath)
 
     #检测文件类型
     def __checkType(self):
@@ -165,11 +169,4 @@ class Uploader():
             "size":self._fileSize
         }
 
-def openQiniu(bool):
-    '''
-    是否启用七牛云
-    :param bool:
-    :return:
-    '''
-    global _if_use_qiniu
-    _if_use_qiniu=bool
+

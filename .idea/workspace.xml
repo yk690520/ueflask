@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6abc6f1f-3d7a-4ac9-98d5-2eb1c76a27d7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ueflask/qiniu/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ueflask/qiniu/upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ueflask/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tmps/image/20180725/1532486748332689261.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tmps/image/20180725/1532491487561442407.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tmps/image/20180725/1532516270354567033.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tmps/image/20180725/1532516324704838478.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tmps/video/20180725/1532491208216642649.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tmps/video/20180725/1532491245162520321.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tmps/video/20180725/1532491299428294542.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tmps/video/20180725/1532491327737177272.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ueflask/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ueflask/qiniu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/qiniu/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ueflask/qiniu/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/qiniu/upload.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ueflask/ue/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/ue/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ueflask/ue/listFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/ue/listFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ueflask/ue/uploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/ueflask/ue/uploader.py" afterDir="false" />
@@ -26,40 +27,55 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ueflask$test.coverage" NAME="test Coverage Results" MODIFIED="1532604219920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ueflask$ueflask.coverage" NAME="ueflask Coverage Results" MODIFIED="1532606561224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ueflask$ueflask.coverage" NAME="ueflask Coverage Results" MODIFIED="1532663131581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="uploader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueflask/ue/uploader.py">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="247">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#34#63#0" expanded="true" />
-                <element signature="e#175#5292#0" />
-                <element signature="e#5653#5754#0" />
+                <element signature="e#19#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ueflask/ue/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="209">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding>
+                <element signature="e#15#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+            <state relative-caret-position="285">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ueflask/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding>
-                <element signature="e#19#42#0" expanded="true" />
+                <element signature="e#248#476#0" />
+                <element signature="e#509#765#0" />
+                <element signature="e#796#880#0" />
+                <element signature="e#930#1212#0" />
+                <element signature="e#1266#1593#0" />
+                <element signature="e#1640#2014#0" />
               </folding>
             </state>
           </provider>
@@ -74,25 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typing.pyi" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="352" column="8" selection-start-line="352" selection-start-column="8" selection-end-line="352" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listFile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueflask/ue/listFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="88" selection-start-line="88" selection-end-line="96" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#88#2433#0" />
-                <element signature="e#2455#2505#0" />
-              </folding>
+            <state relative-caret-position="-760">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -100,45 +102,11 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ueflask/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="95">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueflask/qiniu/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueflask/qiniu/upload.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#26#62#0" expanded="true" />
-                <element signature="e#883#1031#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Python37/Lib/site-packages/qiniu-7.2.2-py3.7.egg!/qiniu/auth.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -189,15 +157,16 @@
         <option value="$PROJECT_DIR$/ue/__init__.py" />
         <option value="$PROJECT_DIR$/build/lib/ue/__init__.py" />
         <option value="$PROJECT_DIR$/ueflask/uploader.py" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/ueflask/qiniu/__init__.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/ueflask/qiniu/__init__.py" />
         <option value="$PROJECT_DIR$/ueflask/qiniu/upload.py" />
         <option value="$PROJECT_DIR$/ueflask/__init__.py" />
-        <option value="$PROJECT_DIR$/ueflask/ue/listFile.py" />
         <option value="$PROJECT_DIR$/ueflask/ue/uploader.py" />
+        <option value="$PROJECT_DIR$/ueflask/ue/listFile.py" />
+        <option value="$PROJECT_DIR$/ueflask/config.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/ueflask/ue/__init__.py" />
       </list>
     </option>
@@ -211,11 +180,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="468" />
-    <option name="y" value="15" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="89" />
+    <option name="y" value="216" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="871" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -236,35 +205,7 @@
             <path>
               <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
               <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
               <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="tmps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="qiniu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ueflask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="ueflask" type="462c0819:PsiDirectoryNode" />
-              <item name="ue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,23 +295,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="89" y="216" width="974" height="871" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32875264" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4086728" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17395833" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.348643" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38900635" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38847384" />
       <window_info active="true" anchor="bottom" id="Thumbnails" order="7" visible="true" weight="0.32946146" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -392,14 +332,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ueflask/ue/listFile.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ueflask/ue/listFile.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/tmps/1s.jpg" />
-    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532421488483111637.jpg" />
-    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532420986328135767.jpg" />
-    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532421462168500327.jpg" />
     <entry file="file://$PROJECT_DIR$/static/tmps/file/20180724/1532422703914149139.txt" />
     <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532421996314511428.jpg" />
     <entry file="file://$PROJECT_DIR$/static/ue/php/action_upload.php" />
@@ -432,13 +380,6 @@
     <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532431462982898309.jpg" />
     <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532431445080856303.jpg" />
     <entry file="file://$PROJECT_DIR$/static/tmps/image/20180724/1532431444763333212.jpg" />
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22686">
-          <caret line="1223" column="8" selection-start-line="1223" selection-start-column="8" selection-end-line="1223" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ue/config.json" />
     <entry file="file://$PROJECT_DIR$/build/lib/ue/__init__.py" />
     <entry file="file://$PROJECT_DIR$/ueflask.egg-info/dependency_links.txt">
@@ -450,12 +391,8 @@
     <entry file="file://$PROJECT_DIR$/ueflask.egg-info/SOURCES.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180725/1532486748332689261.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180725/1532491487561442407.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180725/1532486748332689261.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/tmps/image/20180725/1532491487561442407.jpg" />
     <entry file="file://$PROJECT_DIR$/static/ue/config/Uploader.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
@@ -494,20 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -517,17 +440,80 @@
     </entry>
     <entry file="jar://C:/Program Files/Python37/Lib/site-packages/qiniu-7.2.2-py3.7.egg!/qiniu/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="2280">
           <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueflask/qiniu/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="1812" selection-start-line="1812" selection-end-line="1812" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.qiniu_pythonsdk_hostscache.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="352" column="8" selection-start-line="352" selection-start-column="8" selection-end-line="352" selection-end-column="8" />
+        <state relative-caret-position="131">
+          <caret line="322" column="47" lean-forward="true" selection-start-line="322" selection-start-column="47" selection-end-line="322" selection-end-column="47" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueflask/qiniu/upload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#26#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueflask/ue/listFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#359#1146#0" />
+            <element signature="e#1189#1439#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueflask/ue/uploader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#34#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qiniu_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,75 +522,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-760">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#19#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ueflask/ue/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#15#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ueflask/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="95">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ueflask/qiniu/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ueflask/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="95">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#248#476#0" />
+            <element signature="e#509#765#0" />
+            <element signature="e#796#880#0" />
+            <element signature="e#930#1212#0" />
+            <element signature="e#1266#1593#0" />
+            <element signature="e#1640#2014#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ueflask/qiniu/upload.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#26#62#0" expanded="true" />
-            <element signature="e#883#1031#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ueflask/ue/listFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="88" selection-start-line="88" selection-end-line="96" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#88#2433#0" />
-            <element signature="e#2455#2505#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ueflask/ue/uploader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
-          <folding>
-            <element signature="e#34#63#0" expanded="true" />
-            <element signature="e#175#5292#0" />
-            <element signature="e#5653#5754#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ueflask/ue/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="285">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>

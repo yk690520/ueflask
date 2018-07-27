@@ -1,7 +1,7 @@
 from flask import request
 import os,re
+import ueflask.config as config
 
-_if_use_qiniu=False
 
 class ListFile():
     def __init__(self,config):
@@ -24,8 +24,11 @@ class ListFile():
         end = int(self._start) + int(size)
         self._allowFiles = self._config["allowFiles"]
         # 获取文件列表
-        self._path = self.__addposfixx("%s%s" % (os.getcwd(), self.__addsufixx(self._config["path"])))
-        self.__getfiles()
+        if config._if_use_qiniu:
+            self.__getFilesFromJso()
+        else:
+            self._path = self.__addposfixx("%s%s" % (os.getcwd(), self.__addsufixx(self._config["path"])))
+            self.__getfiles()
 
         if len(self._files) == 0:
             self._stateinfor="no match file"
@@ -35,9 +38,19 @@ class ListFile():
             self._lists = self._files[:lenSize]
             self._stateinfor="SUCCESS"
 
+    def __getFilesFromJso(self):
+        '''
+        从七牛云获取文件
+        :return:null或者取到的文件
+        '''
+        if config._upload_files and config._upload_files.get(self._config["type"]):
+            for filename,fileurl in config._upload_files.get(self._config["type"]).items():
+                if os.path.splitext(filename)[1] in self._allowFiles:
+                    self._files.append({'url':fileurl})
+
     def getReturnInfor(self):
         '''
-        得到返回的紫貂
+        得到返回的字典
         :return:
         '''
         return {
@@ -52,8 +65,6 @@ class ListFile():
         得到path目录下的指定文件url字典，并追加至self._files
         :return:无
         '''
-        if (not os.path.isdir(self._path)):
-            return None
         for root, dirs, files in os.walk(self._path, topdown=False):
             for name in files:
                 if os.path.splitext(name)[1] in self._allowFiles:
@@ -85,13 +96,4 @@ class ListFile():
         url = url.replace("\\\\", "/")
         url = url.replace("\\", "/")
         return url
-
-def openQiniu(bool):
-    '''
-    是否启用七牛云
-    :param bool:
-    :return:
-    '''
-    global _if_use_qiniu
-    _if_use_qiniu=bool
 

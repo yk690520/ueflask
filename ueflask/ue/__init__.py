@@ -8,8 +8,13 @@ import re,os
 from flask import jsonify
 
 
-
-def setApp(app:Flask,ueconfig:str="/static/ue/config/config.json"):
+def __setApp(app:Flask,ueconfig:str="/static/ue/config/config.json"):
+    '''
+    设置flask对象
+    :param app: flask原始对象
+    :param ueconfig: ue配置文件放置位置，默认在/static/ue/config/config.json
+    :return:
+    '''
     if isinstance(app,Flask):
         __loadconfig(ueconfig)
         app.route("/controller", methods=['GET', 'POST'])(__controller)
@@ -25,6 +30,14 @@ def __controller():
     if request.method=='GET':
         if action=="config":
             return jsonify(__ue_config)
+        elif action == "listimage":
+            config = {'allowFiles': __ue_config['imageManagerAllowFiles'],
+                      "listSize": __ue_config['imageManagerListSize'],
+                      "path": __ue_config['imageManagerListPath'],
+                      "type": "image"
+                      }
+            listFile = ListFile(config)
+            return jsonify(listFile.getReturnInfor())
         else:
             return jsonify({"message":"error request"})
     elif request.method=='POST':
@@ -32,7 +45,8 @@ def __controller():
             config={
                 "pathFormat":__ue_config['imagePathFormat'],
                 "maxSize":__ue_config['imageMaxSize'],
-                "allowFiles":__ue_config['imageAllowFiles']
+                "allowFiles":__ue_config['imageAllowFiles'],
+                "type":"image"
             }
             fieldName=__ue_config['imageFieldName']
         elif action=="uploadscrawl":#暂未实现
@@ -41,26 +55,22 @@ def __controller():
             config={
                 "pathFormat":__ue_config['videoPathFormat'],
                 "maxSize":__ue_config['videoMaxSize'],
-                "allowFiles":__ue_config['videoAllowFiles']
+                "allowFiles":__ue_config['videoAllowFiles'],
+                "type": "video"
             }
             fieldName=__ue_config['videoFieldName']
         else:
             config={
                 "pathFormat": __ue_config['filePathFormat'],
                 "maxSize": __ue_config['fileMaxSize'],
-                "allowFiles": __ue_config['fileAllowFiles']
+                "allowFiles": __ue_config['fileAllowFiles'],
+                "type":"other"
             }
             fieldName=__ue_config['fileFieldName']
         uploader=Uploader(fieldName,config)
         return jsonify(uploader.getFileInfo())
     #列出图片
-    elif action=="listimage":
-        config={'allowFiles':__ue_config['imageManagerAllowFiles'],
-                "listSize":__ue_config['imageManagerListSize'],
-                "path":__ue_config['imageManagerListPath']
-                }
-        listFile=ListFile(config)
-        return jsonify(listFile.getReturnInfor())
+
 
 
 #载入ue配置文件
