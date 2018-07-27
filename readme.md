@@ -67,13 +67,15 @@ setup.py    (setup 安装文件)
 
 1、git clone git@github.com:yk690520/ueflask.git           #克隆ueflask代码
 
-2、cd ueflask                     #进入ueflask目录
+2、python setup.py install
 
-3、flask run                       #运行flask
+3、cd ueflask                     #进入ueflask目录
 
-4、在浏览器访问127.0.0.1:5000即可
+4、flask run                       #运行flask
 
-（提示：需先配置flask环境pip3 install flask)
+5、在浏览器访问127.0.0.1:5000即可
+
+
 
 ----------------------------API--------------------------------------
 
