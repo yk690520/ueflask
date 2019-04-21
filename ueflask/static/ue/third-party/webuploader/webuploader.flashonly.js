@@ -4172,5 +4172,5 @@
     ], function( preset ) {
         return preset;
     });
-    return require('webuploader');
+    return require('ueflask/static/ue/third-party/webuploader/webuploader');
 });
