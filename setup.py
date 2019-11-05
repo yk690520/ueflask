@@ -1,14 +1,13 @@
 from setuptools import find_packages,setup
 setup(
     name = 'ueflask',     #pypi中的名称，pip或者easy_install安装时使用的名称
-    version = '0.4',
+    version = '1.4',
     author ='mlea',
     author_email='yk690520@outlook.com',
     description='This is a plugins for uediter',
     keywords='uediter',
-    url='https://github.com/yk690520/origin/tree/master/python/ueflask',
-    packages = find_packages("ueflask"),
-    package_dir={'':'ueflask'},
+    url='https://github.com/yk690520/ueflask',
+    packages = find_packages(),
     include_package_data=True,
     #需要安装的依赖
     install_requires=[

@@ -1,3 +1,0 @@
-qiniu
-static
-ue
